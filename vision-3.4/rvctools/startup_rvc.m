@@ -1,0 +1,26 @@
+disp('Robotics, Vision & Control: (c) Peter Corke 1992-2011 http://www.petercorke.com')
+tb = false;
+rvcpath = fileparts( mfilename('fullpath') );
+
+robotpath = fullfile(rvcpath, 'robot');
+if exist(robotpath,'dir')
+    addpath(robotpath);
+    tb = true;
+    startup_rtb
+end
+
+visionpath = fullfile(rvcpath, 'vision');
+if exist(visionpath,'dir')
+    addpath(visionpath);
+    tb = true;
+    startup_mvtb
+end
+
+if tb
+    addpath(fullfile(rvcpath, 'common'));
+    addpath(fullfile(rvcpath, 'simulink'));
+    addpath(fullfile(rvcpath, 'contrib'));
+
+end
+
+clear tb rvcpath robotpath visionpath 
