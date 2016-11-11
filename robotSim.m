@@ -26,6 +26,30 @@ drawCon()
 drawTable()
 drawArch()
 drawCam()
+drawPlank('w');
 
-q1 = [0, 6.5, 68.8, 0, 14.7, 0]/180*pi;
-irb_120.plot(q1);
+pause(2)
+home = [0, 0, 0, 0, 0, 0]/180*pi;
+irb_120.plot(home);
+
+pause(1)
+
+qt = [-15, 35, 0, 0, 0, 0]/180*pi;
+irb_120.plot(qt);
+
+qg1 = [-30, 35, 0, 0, 0, 0]/180*pi;
+irb_120.plot(qg1);
+pause(1)
+qg2 = [45, 45, 0, 0, 0, 0]/180*pi;
+irb_120.plot(qg2);
+pause(1)
+qg3 = [45, 45, -30 , 0, 30, 0]/180*pi;
+irb_120.plot(qg3);
+pause(1)
+qg4 = [-30, 45, -30, 0, 30, 0]/180*pi;
+irb_120.plot(qg4);
+
+
+drawPlank('y')
+
+
